@@ -1,0 +1,103 @@
+@import "./header";
+@import "./navbar";
+
+body::-webkit-scrollbar {
+  width: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #1378ef;
+}
+
+@font-face {
+  font-family: "Montserrat Alternates";
+  src: url(../fonts/MontserratAlternates-Medium.ttf);
+}
+
+@font-face {
+  font-family: "MontserratAlternates-Black";
+  src: url(../fonts/MontserratAlternates-Black.ttf);
+}
+
+$body-color: #1d2026;
+
+body {
+  font-family: "Sansation Light Italic", arial;
+  background-color: $body-color;
+
+  //Lines========================================
+  .overlay {
+    max-width: 1500px;
+    width: 100%;
+    margin: 0 auto;
+    border-left: 1px solid rgba(255, 255, 255, 0.11);
+    border-right: 1px solid rgba(255, 255, 255, 0.11);
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    @media (max-width: 1300px) {
+      border-left: 2px solid rgba(255, 255, 255, 0.11);
+      border-right: 2px solid rgba(255, 255, 255, 0.11);
+    }
+    &:after {
+      position: absolute;
+      content: "";
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: rgba(255, 255, 255, 0.11);
+      right: 33%;
+      z-index: -1;
+    }
+
+    &:before {
+      position: absolute;
+      content: "";
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: rgba(255, 255, 255, 0.11);
+      left: 33%;
+    }
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  font-family: "Montserrat Alternates";
+  color: whitesmoke;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+
+  /* Scroll Snap */
+  scroll-snap-align: center;
+}

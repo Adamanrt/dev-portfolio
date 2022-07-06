@@ -67,12 +67,12 @@ window.addEventListener("load", windowLoadHandler, false);
 			function init() {
 				wait = 1;
 				count = wait - 1;
-				numToAddEachFrame = 8;
+				numToAddEachFrame = 20;
 				
 				//particle color
-				r = 255;
-				g = 255;
-				b = 255;
+				r = 19;
+				g = 300;
+				b = 239;
 				
 				rgbString = "rgba("+r+","+g+","+b+","; //partial string for color which will be completed by appending alpha value.
 				particleAlpha = 1; //maximum alpha
